@@ -18,5 +18,14 @@ public class StudentGradeCalculator {
             totalMarks += marks[i];
         }
         double averagePercentage = (double) totalMarks / numberOfSubjects;
+
+        char grade = calculateGrade(averagePercentage);
+
+        System.out.println("\nResults:");
+        System.out.println("Total Marks: " + totalMarks);
+        System.out.println("Average Percentage: " + averagePercentage + "%");
+        System.out.println("Grade: " + grade);
+
+        scanner.close();
     }
 }

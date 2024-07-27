@@ -11,5 +11,12 @@ public class StudentGradeCalculator {
 
         int[] marks = new int[numberOfSubjects];
         int totalMarks = 0;
+
+        for (int i = 0; i < numberOfSubjects; i++) {
+            System.out.print("Enter marks for subject " + (i + 1) + " (out of 100): ");
+            marks[i] = scanner.nextInt();
+            totalMarks += marks[i];
+        }
+        double averagePercentage = (double) totalMarks / numberOfSubjects;
     }
 }
